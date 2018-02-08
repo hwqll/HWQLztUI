@@ -13,7 +13,7 @@ class FoundationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "投资"
     }
 
     override func didReceiveMemoryWarning() {

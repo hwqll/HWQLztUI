@@ -63,13 +63,17 @@ class CustomTabbarController: UITabBarController {
         return img!.withRenderingMode(.alwaysOriginal) //设置渲染模式为自身
     }
     
-//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        switch tabBarItem.tag {
-//        case 0:
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
-//    }
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        switch item.tag {
+        case 1:
+            project.navigationItem.title = "投资"
+        case 2:
+            foudation.navigationItem.title = "发现"
+        case 3:
+            myinfo.navigationItem.title = "我的"
+        default:
+            print("")
+        }
+    }
 
 }

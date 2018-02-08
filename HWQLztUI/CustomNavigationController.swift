@@ -12,8 +12,12 @@ class CustomNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+       // self.navigationBar.tintColor = ColorFromRGB(rgbValue: NaviBarColor)
+        //UINavigationBar.appearance().tintColor = ColorFromRGB(rgbValue: NaviBarColor)
+        self.navigationBar.barTintColor =  ColorFromRGB(rgbValue: NaviBarColor)//设置导航栏前景色
+        self.navigationBar.tintColor = UIColor.white
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white, NSAttributedStringKey.font: UIFont(name:"PingFang SC", size:19.0)! ]
     }
 
     override func didReceiveMemoryWarning() {
