@@ -7,38 +7,44 @@
 //
 
 import UIKit
+import MJRefresh
 
 class MyInfoViewController: UIViewController {
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.createUI()
+        self.scrollViewHeaderRefresh()
 
-        self.navigationItem.title = "我的"
-        
-        let localImages = ["cycle1", "cycle2", "cycle3","cycle4"]
-       
-        
-        let cycleView = WRCycleScrollView(frame: CGRect(x: 0, y: 100, width: HScreenWidht, height: 300))
-        cycleView.localImgArray = localImages
-        cycleView.imgsType = .LOCAL
-        cycleView.pageControlAliment = .CenterBottom
-        self.view.addSubview(cycleView)
     }
-
+    func createUI(){
+        self.automaticallyAdjustsScrollViewInsets = false
+        //ios 11.0系统以上需要向上偏移20点
+        if #available(iOS 11.0, *), iPhone58 {
+            self.scrollView.contentInset = UIEdgeInsets(top: -44, left: 0, bottom: 0, right: 0)
+        }else if #available(iOS 11.0, *) {
+            self.scrollView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func scrollViewHeaderRefresh() {
+        self.scrollView.mj_header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(self.loadData))
     }
-    */
+    @objc func loadData() {
+        self.scrollView.mj_header.endRefreshing()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated);
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 
 }

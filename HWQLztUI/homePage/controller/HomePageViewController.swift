@@ -7,25 +7,41 @@
 //
 
 import UIKit
+import MJRefresh
 
 class HomePageViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       //  UIApplication.shared.statusBarStyle = .lightContent
+        self.createUI()
+       self.tableViewHeaderRefresh()
         self.createTableView()
         
     }
-    func createTableView(){
-        //不同的系统版本，设置单元格在最顶部，不在状态栏下方。
-        if #available(iOS 11.0, *) {
-            self.tableView.contentInsetAdjustmentBehavior = .never;
-        } else {
-            self.automaticallyAdjustsScrollViewInsets = false;
+    func createUI(){
+        self.automaticallyAdjustsScrollViewInsets = false
+        //ios 11.0系统以上需要向上偏移20点
+        if #available(iOS 11.0, *), iPhone58 {
+            self.tableView.contentInset = UIEdgeInsets(top: -44, left: 0, bottom: 0, right: 0)
+        }else if #available(iOS 11.0, *) {
+            self.tableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
         }
-        //self.automaticallyAdjustsScrollViewInsets = false
+    }
+    func tableViewHeaderRefresh() {
+        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(self.loadData))
+    }
+    @objc func loadData() {
+        self.tableView.mj_header.endRefreshing()
+    }
+    func createTableView(){
+//        //不同的系统版本，设置单元格在最顶部，不在状态栏下方。
+//        if #available(iOS 11.0, *) {
+//            self.tableView.contentInsetAdjustmentBehavior = .never;
+//        } else {
+//            self.automaticallyAdjustsScrollViewInsets = false;
+//        }
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
@@ -108,7 +124,7 @@ class HomePageViewController: UIViewController , UITableViewDelegate, UITableVie
             return 220
           //  return HScreenWidht * 0.55
         }else if indexPath.section == 1{
-            return HScreenHeight * 0.26
+            return HScreenHeight * 0.35
         }else if indexPath.section == 2{
             return 150
         }else if indexPath.section == 3 {

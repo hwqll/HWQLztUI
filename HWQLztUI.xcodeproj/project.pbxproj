@@ -165,6 +165,7 @@
 		85001498202990AF00C69343 /* HWQLztUI */ = {
 			isa = PBXGroup;
 			children = (
+				850014C92029915D00C69343 /* Custom */,
 				85812FEA20299A6A002732EF /* utils */,
 				850014D02029938E00C69343 /* homePage */,
 				850014CE2029921D00C69343 /* foundation */,
@@ -174,7 +175,6 @@
 				850014A0202990AF00C69343 /* Assets.xcassets */,
 				850014A2202990AF00C69343 /* LaunchScreen.storyboard */,
 				850014A5202990AF00C69343 /* Info.plist */,
-				850014C92029915D00C69343 /* Custom */,
 			);
 			path = HWQLztUI;
 			sourceTree = "<group>";
@@ -686,7 +686,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hwq.HWQLztUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "<Multiple values>/**";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "${SRCROOT}";
 			};
@@ -705,7 +705,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hwq.HWQLztUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "<Multiple values>/**";
 			};
 			name = Release;

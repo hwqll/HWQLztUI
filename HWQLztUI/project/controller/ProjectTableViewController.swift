@@ -60,12 +60,12 @@ class ProjectTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-
+        cell.selectionStyle = .none
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+       // tableView.deselectRow(at: indexPath, animated: true)
     }
     /*
     // Override to support conditional editing of the table view.
