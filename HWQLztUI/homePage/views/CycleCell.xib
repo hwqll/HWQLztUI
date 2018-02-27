@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="226" id="KGk-i7-Jjw" customClass="CycleCell" customModule="HWQLztUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="446" height="225.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbc-nF-hRL" customClass="WRCycleScrollView" customModule="HWQLztUI" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="446" height="180.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Sn-30-n9Y">
+                        <rect key="frame" x="0.0" y="180.5" width="446" height="40"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="喇叭" translatesAutoresizingMaskIntoConstraints="NO" id="GdJ-Wj-bYz">
+                                <rect key="frame" x="15" y="11.5" width="16" height="16"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="更多" translatesAutoresizingMaskIntoConstraints="NO" id="8pF-Jr-HnO">
+                                <rect key="frame" x="432" y="14.5" width="9" height="10"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GdJ-Wj-bYz" firstAttribute="leading" secondItem="7Sn-30-n9Y" secondAttribute="leading" constant="15" id="4F0-Su-LaF"/>
+                            <constraint firstAttribute="trailing" secondItem="8pF-Jr-HnO" secondAttribute="trailing" constant="5" id="ZCI-0e-KaP"/>
+                            <constraint firstItem="8pF-Jr-HnO" firstAttribute="centerY" secondItem="7Sn-30-n9Y" secondAttribute="centerY" id="r0v-aZ-mgy"/>
+                            <constraint firstItem="GdJ-Wj-bYz" firstAttribute="centerY" secondItem="7Sn-30-n9Y" secondAttribute="centerY" id="viD-eB-OIV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.92549020051956177" green="0.92549020051956177" blue="0.92549020051956177" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="7Sn-30-n9Y" firstAttribute="top" secondItem="Zbc-nF-hRL" secondAttribute="bottom" id="Q1j-GS-5GL"/>
+                    <constraint firstItem="Zbc-nF-hRL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RBA-2N-ldE"/>
+                    <constraint firstAttribute="trailing" secondItem="7Sn-30-n9Y" secondAttribute="trailing" id="Rmd-5r-SwL"/>
+                    <constraint firstItem="Zbc-nF-hRL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TPy-qk-91g"/>
+                    <constraint firstItem="7Sn-30-n9Y" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="ajH-PY-VVB"/>
+                    <constraint firstAttribute="trailing" secondItem="Zbc-nF-hRL" secondAttribute="trailing" id="bu0-BY-qrD"/>
+                    <constraint firstItem="Zbc-nF-hRL" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="frR-F7-Xo2"/>
+                    <constraint firstItem="Zbc-nF-hRL" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="tve-5y-qvV"/>
+                    <constraint firstAttribute="bottom" secondItem="7Sn-30-n9Y" secondAttribute="bottom" constant="5" id="v98-iG-dGT"/>
+                    <constraint firstItem="7Sn-30-n9Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xqm-2d-obM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cycleScrollView" destination="Zbc-nF-hRL" id="vwM-Bz-wHO"/>
+                <outlet property="textScrollView" destination="7Sn-30-n9Y" id="Jt3-8f-sYe"/>
+            </connections>
+            <point key="canvasLocation" x="-295" y="-108"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="喇叭" width="16" height="16"/>
+        <image name="更多" width="9" height="10"/>
+    </resources>
+</document>

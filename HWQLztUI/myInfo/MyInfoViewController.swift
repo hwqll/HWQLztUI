@@ -13,7 +13,16 @@ class MyInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "投资"
+        self.navigationItem.title = "我的"
+        
+        let localImages = ["cycle1", "cycle2", "cycle3","cycle4"]
+       
+        
+        let cycleView = WRCycleScrollView(frame: CGRect(x: 0, y: 100, width: HScreenWidht, height: 300))
+        cycleView.localImgArray = localImages
+        cycleView.imgsType = .LOCAL
+        cycleView.pageControlAliment = .CenterBottom
+        self.view.addSubview(cycleView)
     }
 
     override func didReceiveMemoryWarning() {

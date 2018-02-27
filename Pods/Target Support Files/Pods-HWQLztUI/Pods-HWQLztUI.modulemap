@@ -1,0 +1,6 @@
+framework module Pods_HWQLztUI {
+  umbrella header "Pods-HWQLztUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

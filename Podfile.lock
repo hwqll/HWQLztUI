@@ -1,0 +1,15 @@
+PODS:
+  - Kingfisher (4.6.1)
+  - MJRefresh (3.1.15.3)
+
+DEPENDENCIES:
+  - Kingfisher
+  - MJRefresh
+
+SPEC CHECKSUMS:
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+
+PODFILE CHECKSUM: 8d05ea795f842b0e2baca0033526c59b2d4ceda8
+
+COCOAPODS: 1.4.0

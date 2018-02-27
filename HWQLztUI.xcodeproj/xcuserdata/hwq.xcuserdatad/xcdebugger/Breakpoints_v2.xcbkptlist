@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWQLztUI/AppDelegate.swift"
-            timestampString = "539688905.348316"
+            timestampString = "539849985.809157"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "addTabbarController()"
             landmarkType = "7">
          </BreakpointContent>

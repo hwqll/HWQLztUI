@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import MJRefresh
 
 class ProjectTableViewController: UITableViewController {
-
+    let ApearFooter = 6 //显示上拉刷新计划数量
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createUI()
@@ -19,12 +20,23 @@ class ProjectTableViewController: UITableViewController {
     func createUI() {
          self.navigationItem.title = "投资"
     }
+    
     func  createProjectTableView() {
        
         self.tableView.register( UINib(nibName: "ProjectCell", bundle: nil), forCellReuseIdentifier: "cell")
         self.tableView.separatorStyle = .none
         self.tableView.rowHeight = 150
+        //添加首尾刷新
+        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(self.loadData))
+        self.tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(self.loadMoreData))
+        self.tableView.mj_footer.isHidden = true;
+    }
+    @objc func loadData() {
+        self.tableView.mj_header.endRefreshing()
         
+    }
+    @objc func loadMoreData() {
+        self.tableView.mj_footer.endRefreshing()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
