@@ -30,6 +30,15 @@
 		850A6335202D43E60038CB3F /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850A6331202D43E60038CB3F /* WRCycleCell.swift */; };
 		850A6338202D77340038CB3F /* GoodProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850A6336202D77340038CB3F /* GoodProjectCell.swift */; };
 		850A6339202D77340038CB3F /* GoodProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 850A6337202D77340038CB3F /* GoodProjectCell.xib */; };
+		8538243E205B5E4F00CAFA3A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538243D205B5E4F00CAFA3A /* SettingViewController.swift */; };
+		85382442205B6C8C00CAFA3A /* InvestmentRecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85382441205B6C8C00CAFA3A /* InvestmentRecordTableViewController.swift */; };
+		85382444205B6D3D00CAFA3A /* InvestmentRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85382443205B6D3D00CAFA3A /* InvestmentRecordTableViewCell.swift */; };
+		85382446205B780600CAFA3A /* CardManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85382445205B780600CAFA3A /* CardManageViewController.swift */; };
+		85382448205B910300CAFA3A /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85382447205B910300CAFA3A /* ProjectDetailViewController.swift */; };
+		8538244A205B96CD00CAFA3A /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85382449205B96CD00CAFA3A /* HeaderTableViewCell.swift */; };
+		8538244E205BB07A00CAFA3A /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538244D205BB07A00CAFA3A /* ProductTableViewCell.swift */; };
+		85382450205BBA4500CAFA3A /* BottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8538244F205BBA4500CAFA3A /* BottomTableViewCell.swift */; };
+		85382452205E2DB000CAFA3A /* InvestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85382451205E2DB000CAFA3A /* InvestViewController.swift */; };
 		85812FEC20299A92002732EF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85812FEB20299A92002732EF /* Constant.swift */; };
 		85812FEE2029A17F002732EF /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85812FED2029A17F002732EF /* CustomNavigationController.swift */; };
 		85812FF02029AECE002732EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85812FEF2029AECE002732EF /* ViewController.swift */; };
@@ -86,6 +95,15 @@
 		850A6331202D43E60038CB3F /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
 		850A6336202D77340038CB3F /* GoodProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodProjectCell.swift; sourceTree = "<group>"; };
 		850A6337202D77340038CB3F /* GoodProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodProjectCell.xib; sourceTree = "<group>"; };
+		8538243D205B5E4F00CAFA3A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		85382441205B6C8C00CAFA3A /* InvestmentRecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentRecordTableViewController.swift; sourceTree = "<group>"; };
+		85382443205B6D3D00CAFA3A /* InvestmentRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentRecordTableViewCell.swift; sourceTree = "<group>"; };
+		85382445205B780600CAFA3A /* CardManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManageViewController.swift; sourceTree = "<group>"; };
+		85382447205B910300CAFA3A /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		85382449205B96CD00CAFA3A /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		8538244D205BB07A00CAFA3A /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		8538244F205BBA4500CAFA3A /* BottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTableViewCell.swift; sourceTree = "<group>"; };
+		85382451205E2DB000CAFA3A /* InvestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestViewController.swift; sourceTree = "<group>"; };
 		85812FEB20299A92002732EF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		85812FED2029A17F002732EF /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		85812FEF2029AECE002732EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -218,8 +236,9 @@
 		850014CD2029920F00C69343 /* myInfo */ = {
 			isa = PBXGroup;
 			children = (
-				850014D92029945B00C69343 /* MyInfoViewController.swift */,
-				850014DB2029946D00C69343 /* MyInfo.storyboard */,
+				8538243C205B5E3400CAFA3A /* models */,
+				8538243B205B5E2C00CAFA3A /* controllers */,
+				8538243A205B5E2300CAFA3A /* views */,
 			);
 			path = myInfo;
 			sourceTree = "<group>";
@@ -248,6 +267,9 @@
 				850014D5202993ED00C69343 /* Project.storyboard */,
 				858E617A202C2A6D0040DBA4 /* ProjectCell.swift */,
 				858E617B202C2A6D0040DBA4 /* ProjectCell.xib */,
+				85382449205B96CD00CAFA3A /* HeaderTableViewCell.swift */,
+				8538244D205BB07A00CAFA3A /* ProductTableViewCell.swift */,
+				8538244F205BBA4500CAFA3A /* BottomTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -256,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				850014D72029942A00C69343 /* ProjectTableViewController.swift */,
+				85382447205B910300CAFA3A /* ProjectDetailViewController.swift */,
+				85382451205E2DB000CAFA3A /* InvestViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -292,6 +316,33 @@
 				850A6331202D43E60038CB3F /* WRCycleCell.swift */,
 			);
 			path = WRCycleScrollView;
+			sourceTree = "<group>";
+		};
+		8538243A205B5E2300CAFA3A /* views */ = {
+			isa = PBXGroup;
+			children = (
+				850014DB2029946D00C69343 /* MyInfo.storyboard */,
+				85382443205B6D3D00CAFA3A /* InvestmentRecordTableViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		8538243B205B5E2C00CAFA3A /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				850014D92029945B00C69343 /* MyInfoViewController.swift */,
+				8538243D205B5E4F00CAFA3A /* SettingViewController.swift */,
+				85382441205B6C8C00CAFA3A /* InvestmentRecordTableViewController.swift */,
+				85382445205B780600CAFA3A /* CardManageViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		8538243C205B5E3400CAFA3A /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		85812FEA20299A6A002732EF /* utils */ = {
@@ -504,21 +555,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				850A6338202D77340038CB3F /* GoodProjectCell.swift in Sources */,
+				85382448205B910300CAFA3A /* ProjectDetailViewController.swift in Sources */,
 				850A6333202D43E60038CB3F /* WRPageControl.swift in Sources */,
+				85382452205E2DB000CAFA3A /* InvestViewController.swift in Sources */,
 				85812FEC20299A92002732EF /* Constant.swift in Sources */,
 				850014E0202994A100C69343 /* FoundationViewController.swift in Sources */,
 				8500149A202990AF00C69343 /* AppDelegate.swift in Sources */,
+				8538243E205B5E4F00CAFA3A /* SettingViewController.swift in Sources */,
 				850A6335202D43E60038CB3F /* WRCycleCell.swift in Sources */,
+				85382450205BBA4500CAFA3A /* BottomTableViewCell.swift in Sources */,
 				850A6332202D43E60038CB3F /* WRProxy.swift in Sources */,
 				85FBA2DC2044EA9C0043F362 /* BottomCell.swift in Sources */,
 				858E617C202C2A6D0040DBA4 /* ProjectCell.swift in Sources */,
+				85382442205B6C8C00CAFA3A /* InvestmentRecordTableViewController.swift in Sources */,
 				85812FF02029AECE002732EF /* ViewController.swift in Sources */,
 				850A6334202D43E60038CB3F /* WRCycleScrollView.swift in Sources */,
+				85382444205B6D3D00CAFA3A /* InvestmentRecordTableViewCell.swift in Sources */,
 				850014DA2029945B00C69343 /* MyInfoViewController.swift in Sources */,
 				85812FEE2029A17F002732EF /* CustomNavigationController.swift in Sources */,
+				8538244E205BB07A00CAFA3A /* ProductTableViewCell.swift in Sources */,
 				850A632B202D42AF0038CB3F /* CycleCell.swift in Sources */,
 				850014E2202995C900C69343 /* CustomTabbarController.swift in Sources */,
 				850014D82029942A00C69343 /* ProjectTableViewController.swift in Sources */,
+				85382446205B780600CAFA3A /* CardManageViewController.swift in Sources */,
+				8538244A205B96CD00CAFA3A /* HeaderTableViewCell.swift in Sources */,
 				850014D4202993CF00C69343 /* HomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

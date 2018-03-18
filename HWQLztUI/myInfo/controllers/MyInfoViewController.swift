@@ -14,8 +14,9 @@ class MyInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
         self.createUI()
+        self.hideBackBarButtonTitle()
         self.scrollViewHeaderRefresh()
 
     }
@@ -27,6 +28,11 @@ class MyInfoViewController: UIViewController {
         }else if #available(iOS 11.0, *) {
             self.scrollView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
         }
+       
+    }
+    
+    func hideBackBarButtonTitle()  {
+         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,6 +51,16 @@ class MyInfoViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "setIdentifier" {
+            let c = segue.destination as! SettingViewController
+            c.hidesBottomBarWhenPushed = true
+        }else if segue.identifier == "investmentRecordIdentifier" {
+            let c = segue.destination as! InvestmentRecordTableViewController
+            c.hidesBottomBarWhenPushed = true
+        }
     }
 
 }
