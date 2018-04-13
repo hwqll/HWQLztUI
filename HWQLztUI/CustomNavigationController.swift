@@ -13,15 +13,19 @@ class CustomNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // self.navigationBar.tintColor = ColorFromRGB(rgbValue: NaviBarColor)
-        //UINavigationBar.appearance().tintColor = ColorFromRGB(rgbValue: NaviBarColor)
-        self.navigationBar.barTintColor =  ColorFromRGB(rgbValue: NaviBarColor)//设置导航栏前景色
+        let bar = UINavigationBar.appearance()
+        
+        bar.barTintColor = UIColor(red: 3/255.0, green: 60/255.0, blue: 255/255.0, alpha: 1)
+        bar.isTranslucent = false
+       // self.navigationBar.barTintColor =  ColorFromRGB(rgbValue: NaviBarColor)//设置导航栏前景色
         self.navigationBar.tintColor = UIColor.white //item字体颜色
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white, NSAttributedStringKey.font: UIFont(name:"PingFang SC", size:19.0)! ]
         //自定义返回按钮图片
         let backImage = UIImage(named: "ico_back")
         self.navigationBar.backIndicatorImage = backImage
         self.navigationBar.backIndicatorTransitionMaskImage = backImage
+        
+        
         
         
         

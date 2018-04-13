@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lead View Controller-->
+        <scene sceneID="WFc-tA-MGF">
+            <objects>
+                <viewController storyboardIdentifier="LeadViewController" id="VlA-vW-u8J" customClass="LeadViewController" customModule="HWQLztUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="STg-nk-Vx2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSc-0b-ESo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="zUL-gN-XdS" kind="embed" id="WqZ-1K-G4k"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUT-yS-346">
+                                <rect key="frame" x="137.5" y="537" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.39215686274509803" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BlR-1q-amL"/>
+                                    <constraint firstAttribute="height" constant="30" id="LmK-ei-L6z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <state key="normal" title="开始探索">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTappedWithSender:" destination="VlA-vW-u8J" eventType="touchUpInside" id="fjZ-O2-3Li"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fos-DS-Gt1" firstAttribute="bottom" secondItem="FUT-yS-346" secondAttribute="bottom" constant="100" id="4ZP-de-fNj"/>
+                            <constraint firstItem="tSc-0b-ESo" firstAttribute="top" secondItem="STg-nk-Vx2" secondAttribute="top" id="PJh-3k-3KC"/>
+                            <constraint firstItem="fos-DS-Gt1" firstAttribute="trailing" secondItem="tSc-0b-ESo" secondAttribute="trailing" id="Z5F-wa-Gj3"/>
+                            <constraint firstItem="tSc-0b-ESo" firstAttribute="leading" secondItem="fos-DS-Gt1" secondAttribute="leading" id="cDo-Y0-BMw"/>
+                            <constraint firstItem="FUT-yS-346" firstAttribute="centerX" secondItem="STg-nk-Vx2" secondAttribute="centerX" id="oyB-Uf-gdV"/>
+                            <constraint firstItem="fos-DS-Gt1" firstAttribute="bottom" secondItem="tSc-0b-ESo" secondAttribute="bottom" id="vlH-Sm-RSL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fos-DS-Gt1"/>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="FUT-yS-346" id="wyG-YE-Q8i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTX-3Z-XMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-756" y="64"/>
+        </scene>
+        <!--Lead Page View Controller-->
+        <scene sceneID="DDz-Os-ayy">
+            <objects>
+                <pageViewController storyboardIdentifier="LeadPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zUL-gN-XdS" customClass="LeadPageViewController" customModule="HWQLztUI" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ta-vW-gA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="64"/>
+        </scene>
+        <!--Lead Page Content View Controller-->
+        <scene sceneID="Cas-jk-Yqd">
+            <objects>
+                <viewController storyboardIdentifier="LeadPageContentViewController" id="CZO-TB-Xmm" customClass="LeadPageContentViewController" customModule="HWQLztUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axU-Wq-yln">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZeD-iE-MFx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZeD-iE-MFx" firstAttribute="top" secondItem="axU-Wq-yln" secondAttribute="top" id="GQa-dC-vbe"/>
+                            <constraint firstItem="gVI-tC-0TO" firstAttribute="bottom" secondItem="ZeD-iE-MFx" secondAttribute="bottom" id="PWI-iK-BH5"/>
+                            <constraint firstItem="gVI-tC-0TO" firstAttribute="trailing" secondItem="ZeD-iE-MFx" secondAttribute="trailing" id="UON-jZ-37z"/>
+                            <constraint firstItem="ZeD-iE-MFx" firstAttribute="leading" secondItem="gVI-tC-0TO" secondAttribute="leading" id="dOg-xC-RgG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gVI-tC-0TO"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="ZeD-iE-MFx" id="dZC-Ox-dI2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EAm-Bq-7QX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="63"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,7 +10,7 @@ import UIKit
 
 class CycleCell: UITableViewCell {
 
-    @IBOutlet weak var cycleScrollView: WRCycleScrollView!
+  //  @IBOutlet weak var cycleScrollView: WRCycleScrollView!
     
 //    @IBOutlet weak var cycleScrollView: UIView!
     @IBOutlet weak var textScrollView: UIView!

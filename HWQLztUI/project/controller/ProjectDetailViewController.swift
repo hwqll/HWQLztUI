@@ -10,6 +10,11 @@ import UIKit
 
 class ProjectDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //MARK: - property
+    var processImageView : UIImageView?
+    
+    @IBOutlet var headerBgView : UIView!
+    
+    @IBOutlet weak var processLineView: UIView!
     
     @IBOutlet weak var investBottomConstraint: NSLayoutConstraint!{
         didSet {
@@ -29,16 +34,38 @@ class ProjectDetailViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.createUI()
         self.navigationItem.title = "20180802-新手宝"
+        
         self.navigationController?.navigationBar.shadowImage = UIImage()
+       // self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.tableView.separatorStyle = .none
         
         self.automaticallyAdjustsScrollViewInsets = false
       //  self.hidesBottomBarWhenPushed = true
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        
         
     }
-
+    func createUI(){
+        self.headerBgView.backgroundColor = UIColor(red: 3/255.0, green: 60/255.0, blue: 255/255.0, alpha: 1)
+        
+        let processWidth : CGFloat = 4
+        let processHeight = processLineView.bounds.size.height + 4
+        let x : CGFloat = HScreenWidht / 2 //假设进度条在中间
+        let y = processLineView.bounds.origin.y-2
+        
+        processImageView = UIImageView()
+        processImageView?.frame = CGRect(x: CGFloat(0), y: y, width: processWidth, height: processHeight)
+        processImageView?.image = UIImage(named: "椭圆")
+        
+        processLineView.addSubview(processImageView!)
+        
+        UIView.animate(withDuration: 2.0) {
+            self.processImageView?.frame = CGRect(x: x, y: y, width: processWidth, height: processHeight)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
